@@ -1,0 +1,59 @@
+GDRE Tools v0.9.0-beta.4
+EndeavourOS #1 ZEN SMP PREEMPT_DYNAMIC Sun, 23 Mar 2025 17:17:17 +0000, NVC1, opengl3
+Opening file: ~/Downloads/game title here/gametitlehere.exe
+Verified 41 files, no errors detected!
+Extracted 41 files, no errors detected!
+WARNING: Converting lossy imports, you may lose fidelity for indicated assets when re-importing upon loading the project
+   at: _export_imports (modules/gdsdecomp/utility/import_exporter.cpp:241)
+Script version 4.3.0-stable (rev 0x77af6ca) detected
+Recreating plugin configs...
+Exporting resources in parallel...
+Saved project config project.godot.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     9
+Failed scripts:                         0
+Imported resources for export session:  9
+Successfully converted:                 9
+Lossy:                                  0
+Rewrote metadata:                       2
+Non-importable conversions:             1
+Not converted:                          0
+Failed conversions:                     0
+-------------
+
+------
+
+The following native plugins failed to have their libraries copied:
+godot-jolt
+------
+
+The following files were converted and saved to a non-original path, but did not have their import data rewritten.
+These files will not be re-imported when loading the project.
+res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.s3tc.ctex to res://.assets/icon.png
+
+
+
+---------------------------------IMPORTANT NOTES----------------------------------
+
+
+Missing GDExtension Libraries:
+The following GDExtension addons could not be found for your platform.
+Tip: Try finding the plugin in the Godot Asset Library or Github.
+
+ - godot-jolt
+
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.3.0 to edit the project.
+Note: the project may be using a custom version of Godot. Detection for this has not been implemented yet.
+If you find that you have many non-import errors upon opening the project 
+(i.e. scripts or shaders have many errors), use the original game's binary as the export template.
+
+*******************************************************************************
+

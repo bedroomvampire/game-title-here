@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjp18g5iux330"]
+
+[ext_resource type="Script" uid="uid://dr0eojjrqayv8" path="res://entities/physobj/scripts/physobj.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://72dvmbuayi1x" path="res://placeholders/textures/grid.png" id="2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7st0s"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_6e2lo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hrmog"]
+albedo_texture = ExtResource("2")
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[node name="RigidBody3D3" type="RigidBody3D" node_paths=PackedStringArray("collision")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 40, -12)
+mass = 2.0
+can_sleep = false
+constant_force = Vector3(0, -128, 0)
+script = ExtResource("1")
+collision = NodePath("CollisionShape3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+shape = SubResource("BoxShape3D_7st0s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("BoxMesh_6e2lo")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_hrmog")
+
+[node name="PhysObj" type="Node" parent="."]
